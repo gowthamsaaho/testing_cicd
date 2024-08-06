@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    tools{
+        jdk 'java17'
+        maven 'maven3'
+    }
+    stages {
+        stage('Git checkout') {
+            steps {
+                echo 'mvn clean install'
+            }
+        }
+        
+        stage('maven test') {
+            steps {
+                echo 'mvn clean test'
+            }
+        }
+    }
+}
+
+
+
