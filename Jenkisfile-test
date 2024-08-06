@@ -11,11 +11,12 @@ pipeline {
             }
         }
         
-        stage('maven test-base code') {
+        stage('maven test-1') {
             steps {
                 echo 'mvn clean test'
             }
         }
     }
 }
+
 
